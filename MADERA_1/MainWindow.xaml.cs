@@ -25,5 +25,10 @@ namespace MADERA_1
         {
             InitializeComponent();
         }
+
+        private void Connexion(object sender, RoutedEventArgs e)
+        {
+            Accueil.Visibility = Visibility.Hidden;
+        }
     }
 }
