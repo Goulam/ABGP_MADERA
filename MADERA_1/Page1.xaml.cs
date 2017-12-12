@@ -12,24 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MahApps.Metro.Controls;
 
 namespace MADERA_1
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour Page1.xaml
     /// </summary>
-    public partial class MainWindow
+    public partial class Page1 : Page
     {
-        public MainWindow()
+        public Page1()
         {
             InitializeComponent();
-        }
-
-        private void Connexion(object sender, RoutedEventArgs e)
-        {
-            Page1 mypage = new Page1();
-            Frame1.Navigate(mypage);
         }
     }
 }
