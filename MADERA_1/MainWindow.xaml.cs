@@ -25,6 +25,8 @@ namespace MADERA_1
         {
             InitializeComponent();
             Connect.Content = "Connexion";
+            Présentation presentation = new Présentation();
+            this.Content = presentation;
         }
 
         private void Devis(object sender, RoutedEventArgs e)
@@ -46,8 +48,14 @@ namespace MADERA_1
                 Connexion connexion = new Connexion();
                 this.Content = connexion;
                 Connect.Content = "Deconnexion";
+                MesDevis.Visibility = Visibility.Visible;
+                NewDevis.Visibility = Visibility.Visible;
             } else
             {
+                Présentation presentation = new Présentation();
+                this.Content = presentation;
+                MesDevis.Visibility = Visibility.Hidden;
+                NewDevis.Visibility = Visibility.Hidden;
                 //se déconnecter
                 Connect.Content = "Connexion";
             }

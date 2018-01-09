@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace MADERA_1
 {
     /// <summary>
-    /// Logique d'interaction pour Devis.xaml
+    /// Logique d'interaction pour Présentation.xaml
     /// </summary>
-    public partial class Devis : Page
+    public partial class Présentation : Page
     {
-        public Devis()
+        public Présentation()
         {
             InitializeComponent();
-        }
-
-        private void Register(object sender, RoutedEventArgs e)
-        {
-            //enregistrer
-            //envoyer sur le nouvel ecran
-            First.Visibility = Visibility.Hidden;
-            Two.Visibility = Visibility.Visible;
         }
     }
 }
