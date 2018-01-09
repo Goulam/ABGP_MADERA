@@ -11,8 +11,77 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
-            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
         <Image Grid.Row="0" Source="Image/madera.jpg" Margin="20px"></Image>
+        <Grid Grid.Row="1" Margin="100px">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Grid.Column="0">Nouveau Devis</Button>
+            </Grid>
+            <FlowDocumentReader Grid.Row="1" ViewingMode="Scroll">
+                <FlowDocument>
+                    <Table CellSpacing="5">
+
+                        <Table.Columns>
+                            <TableColumn/>
+                            <TableColumn/>
+                            <TableColumn/>
+                            <TableColumn/>
+                        </Table.Columns>
+
+                        <TableRowGroup>
+
+                            <!-- Header row for the table. -->
+                            <TableRow Background="White">
+                                <TableCell>
+                                    <Paragraph FontSize="14pt" FontWeight="Bold">Devis N°</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph FontSize="14pt" FontWeight="Bold">Date</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph FontSize="14pt" FontWeight="Bold">Paiement</Paragraph>
+                                </TableCell>
+                            </TableRow>
+
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph>XXXX</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>XX/XX/XXXX</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>XX%</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow Background="lightgray">
+                                <TableCell>
+                                    <Paragraph>YYYY</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>YY/YY/YYYY</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>YY%</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                </FlowDocument>
+            </FlowDocumentReader>
+        </Grid>
     </Grid>
 </Page>
