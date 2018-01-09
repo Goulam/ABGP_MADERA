@@ -24,12 +24,32 @@ namespace MADERA_1
         public MainWindow()
         {
             InitializeComponent();
+            Connect.Content = "Connexion";
         }
 
-        private void Connexion(object sender, RoutedEventArgs e)
+        private void Devis(object sender, RoutedEventArgs e)
         {
             Accueil accueil = new Accueil();
             this.Content = accueil;
+        }
+
+        private void New(object sender, RoutedEventArgs e)
+        {
+            Devis devis = new Devis();
+            this.Content = devis;
+        }
+
+        private void Connect_Click(object sender, RoutedEventArgs e)
+        {
+            if(Connect.Content == "Connexion")
+            {
+                Connexion connexion = new Connexion();
+                this.Content = connexion;
+                Connect.Content = "Deconnexion";
+            } else
+            {
+                //se déconnecter
+            }
         }
     }
 }

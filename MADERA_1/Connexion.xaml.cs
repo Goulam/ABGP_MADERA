@@ -16,19 +16,18 @@ using System.Windows.Shapes;
 namespace MADERA_1
 {
     /// <summary>
-    /// Logique d'interaction pour Accueil.xaml
+    /// Logique d'interaction pour Connexion.xaml
     /// </summary>
-    public partial class Accueil : Page
+    public partial class Connexion : Page
     {
-        public Accueil()
+        public Connexion()
         {
             InitializeComponent();
         }
 
-        private void New(object sender, RoutedEventArgs e)
+        private void Enter(object sender, RoutedEventArgs e)
         {
-            Devis devis = new Devis();
-            this.Content = devis;
+            this.Content = "Vous êtes connecté(e)";
         }
     }
 }
