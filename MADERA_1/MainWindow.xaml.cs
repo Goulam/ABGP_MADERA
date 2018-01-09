@@ -49,6 +49,7 @@ namespace MADERA_1
             } else
             {
                 //se déconnecter
+                Connect.Content = "Connexion";
             }
         }
     }
