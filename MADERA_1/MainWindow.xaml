@@ -13,7 +13,6 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
-        <Frame Name="Frame1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Image Grid.Row="0" Source="Image/madera.jpg" Margin="20px"></Image>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>

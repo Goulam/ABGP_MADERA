@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace MADERA_1
 {
     /// <summary>
-    /// Logique d'interaction pour Page1.xaml
+    /// Logique d'interaction pour Accueil.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Accueil : Page
     {
-        public Page1()
+        public Accueil()
         {
             InitializeComponent();
         }

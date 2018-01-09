@@ -28,8 +28,8 @@ namespace MADERA_1
 
         private void Connexion(object sender, RoutedEventArgs e)
         {
-            Page1 mypage = new Page1();
-            Frame1.Navigate(mypage);
+            Accueil accueil = new Accueil();
+            this.Content = accueil;
         }
     }
 }
