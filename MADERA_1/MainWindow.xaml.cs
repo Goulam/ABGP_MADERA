@@ -41,7 +41,7 @@ namespace MADERA_1
 
         private void Connect_Click(object sender, RoutedEventArgs e)
         {
-            if(Connect.Content == "Connexion")
+            if(Connect.Content.ToString() == "Connexion")
             {
                 Connexion connexion = new Connexion();
                 this.Content = connexion;
