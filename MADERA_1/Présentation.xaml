@@ -8,7 +8,5 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Présentation">
 
-    <Grid>
-        <Button>Présentation</Button>
-    </Grid>
+     <Image Source="Image/madera1.jpg" Margin="150px"></Image>
 </Page>
