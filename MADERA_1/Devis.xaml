@@ -10,13 +10,13 @@
       Title="Devis">
 
     <Grid>
-        <Grid Name="First">
+        <Grid Name="First" Margin="100px">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="3*" />
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Source="Image/madera.jpg" Margin="20px"></Image>
-            <Grid Grid.Row="1" Margin="100px">
+            <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="3*" />
                     <RowDefinition Height="3*" />
@@ -26,20 +26,18 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                         <ColumnDefinition Width="1*"></ColumnDefinition>
-                        <ColumnDefinition Width="1*"></ColumnDefinition>
-                        <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="0" Grid.Column="1">Nom du projet</Label>
-                    <Label Grid.Row="1" Grid.Column="1">Référence du projet</Label>
-                    <Label Grid.Row="2" Grid.Column="1">Date</Label>
-                    <TextBox Name="NameProjectText" Grid.Column="2" Grid.Row="0" Controls:TextBoxHelper.Watermark="Saisir le nom du projet" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
-                    <TextBox Name="RefProjectText" Grid.Column="2" Grid.Row="1" Controls:TextBoxHelper.Watermark="Saisir la référence du projet" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
-                    <TextBox Name="DateProjectText" Grid.Column="2" Grid.Row="2" Controls:TextBoxHelper.Watermark="Saisir la date du projet" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                    <Label Grid.Row="0" Grid.Column="0">Nom du projet</Label>
+                    <Label Grid.Row="1" Grid.Column="0">Référence du projet</Label>
+                    <Label Grid.Row="2" Grid.Column="0">Date</Label>
+                    <TextBox Name="NameProjectText" Grid.Column="1" Grid.Row="0" Controls:TextBoxHelper.Watermark="Saisir le nom du projet" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                    <TextBox Name="RefProjectText" Grid.Column="1" Grid.Row="1" Controls:TextBoxHelper.Watermark="Saisir la référence du projet" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                    <TextBox Name="DateProjectText" Grid.Column="1" Grid.Row="2" Controls:TextBoxHelper.Watermark="Saisir la date du projet" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
                 </Grid>
                 <Grid Grid.Row="3">
                     <Grid.ColumnDefinitions>
@@ -52,8 +50,335 @@
 
             </Grid>
         </Grid>
-        <Grid Name="Two" Visibility="Hidden">
-            <Button>SUITE</Button>
+        <Grid Name="Two" Visibility="Hidden" Margin="100px">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Name="Gamme" Content ="1 - Gamme" Grid.Column="0" Height="50px" Margin="2px" Click="Gamme_Click"></Button>
+                <Button Name="Finition" Content ="2 - Finition" Grid.Column="1" Height="50px" Margin="2px" Click="Finition_Click" IsEnabled="False"></Button>
+                <Button Name="Modèle" Content ="3 - Modèle" Grid.Column="2" Height="50px" Margin="2px" Click="Modèle_Click" IsEnabled="False"></Button>
+                <Button Name="Couleur" Content ="4 - Couleur" Grid.Column="3" Height="50px" Margin="2px" Click="Couleur_Click" IsEnabled="False"></Button>
+                <Button Name="Client" Content ="5 - Client" Grid.Column="4" Height="50px" Margin="2px" Click="Client_Click" IsEnabled="False"></Button>
+                <Button Name="Paiement" Content ="6 - Paiement" Grid.Column="5" Height="50px" Margin="2px" Click="Paiement_Click" IsEnabled="False"></Button>
+                <Button Name="Demo" Content ="7 - Démonstration" Grid.Column="6" Height="50px" Margin="2px" Click="Demo_Click" IsEnabled="False"></Button>
+                <Button Name="Envoi" Content ="8 - Envoi" Grid.Column="7" Height="50px" Margin="2px" Click="Envoi_Click" IsEnabled="False"></Button>
+            </Grid>
+            <Grid Name ="ContentGridAll" Grid.Row="1">
+                <Grid Name="BaseGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" HorizontalAlignment="Center" FontSize="30" FontWeight="ExtraBold">Pour créer mon devis</Label>
+                    <Label Grid.Row="1" HorizontalAlignment="Center" FontSize="20">Plusieurs étapes : </Label>
+                    <Label Name="GammeDefinition" Grid.Row="2" HorizontalAlignment="Center" FontSize="15">- Définir la gamme</Label>
+                    <Label Name="FinitionDefinition" Grid.Row="3" HorizontalAlignment="Center" FontSize="15">- Définir la finition</Label>
+                    <Label Name="CouleurDefinition" Grid.Row="4" HorizontalAlignment="Center" FontSize="15">- Définir la couleur</Label>
+                    <Label Name="ClientDefinition" Grid.Row="5" HorizontalAlignment="Center" FontSize="15">- Saisir les informations clients</Label>
+                    <Label Name="PaiementDefinition" Grid.Row="6" HorizontalAlignment="Center" FontSize="15">- Définir la méthode de paiement</Label>
+                </Grid>
+                <Grid Name="GammeGrid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Type d'isolant" VerticalAlignment="Center"></Label>
+                        <Label Grid.Row="1" Grid.Column="0" Content="Type de couverture" VerticalAlignment="Center"></Label>
+                        <Label Grid.Row="2" Grid.Column="0" Content="Qualité des huisseries" VerticalAlignment="Center"></Label>
+                        <ComboBox Grid.Row="0" Grid.Column="1" Height="50px">
+                            <ComboBoxItem Content="Synthétique"></ComboBoxItem>
+                            <ComboBoxItem Content="Naturel"></ComboBoxItem>
+                            <ComboBoxItem Content="Biologique"></ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Row="1" Grid.Column="1" Height="50px">
+                            <ComboBoxItem Content="Tuiles"></ComboBoxItem>
+                            <ComboBoxItem Content="Ardoises"></ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Row="2" Grid.Column="1" Height="50px">
+                            <ComboBoxItem Content="Low Cost"></ComboBoxItem>
+                            <ComboBoxItem Content="Entrée Gamme"></ComboBoxItem>
+                            <ComboBoxItem Content="Milieu Gamme"></ComboBoxItem>
+                            <ComboBoxItem Content="Haute Gamme"></ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+                    
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Name="GammeRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="GammeRegister_Click">Enregistrer</Button>
+                    </Grid>
+                </Grid>
+                <Grid Name="FinitionGrid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Nombre de pièces" VerticalAlignment="Center"></Label>
+                        <ComboBox Grid.Row="0" Grid.Column="1" Height="50px">
+                            <ComboBoxItem Content="1"></ComboBoxItem>
+                            <ComboBoxItem Content="2"></ComboBoxItem>
+                            <ComboBoxItem Content="3"></ComboBoxItem>
+                            <ComboBoxItem Content="4"></ComboBoxItem>
+                            <ComboBoxItem Content="5"></ComboBoxItem>
+                            <ComboBoxItem Content="6"></ComboBoxItem>
+                            <ComboBoxItem Content="7"></ComboBoxItem>
+                            <ComboBoxItem Content="8"></ComboBoxItem>
+                            <ComboBoxItem Content="9"></ComboBoxItem>
+                            <ComboBoxItem Content="10"></ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Name="FinitionRegister"  Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="FinitionRegister_Click">Enregistrer</Button>
+                    </Grid>
+                </Grid>
+                <Grid Name="ModeleGrid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Type" VerticalAlignment="Center"></Label>
+                        <ComboBox Grid.Row="0" Grid.Column="1" Height="50px">
+                            <ComboBoxItem Content="Crépis"></ComboBoxItem>
+                            <ComboBoxItem Content="Bois"></ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Name="ModeleRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="ModeleRegister_Click">Enregistrer</Button>
+                    </Grid>
+                </Grid>
+                <Grid Name="CouleurGrid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Pièce 1" VerticalAlignment="Center"></Label>
+                        <ComboBox Grid.Row="0" Grid.Column="1" Height="50px">
+                            <ComboBoxItem Content="Cuisine"></ComboBoxItem>
+                            <ComboBoxItem Content="Salle à manger"></ComboBoxItem>
+                            <ComboBoxItem Content="Chambre"></ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Row="0" Grid.Column="2" Height="50px">
+                            <ComboBoxItem Content="Rouge"></ComboBoxItem>
+                            <ComboBoxItem Content="Vert"></ComboBoxItem>
+                            <ComboBoxItem Content="Jaune"></ComboBoxItem>
+                        </ComboBox>
+                        <Label Grid.Row="1" Grid.Column="0" Content="Pièce 2" VerticalAlignment="Center"></Label>
+                        <ComboBox Grid.Row="1" Grid.Column="1" Height="50px">
+                            <ComboBoxItem Content="Cuisine"></ComboBoxItem>
+                            <ComboBoxItem Content="Salle à manger"></ComboBoxItem>
+                            <ComboBoxItem Content="Chambre"></ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Row="1" Grid.Column="2" Height="50px">
+                            <ComboBoxItem Content="Rouge"></ComboBoxItem>
+                            <ComboBoxItem Content="Vert"></ComboBoxItem>
+                            <ComboBoxItem Content="Jaune"></ComboBoxItem>
+                        </ComboBox>
+                        <Label Grid.Row="2" Grid.Column="0" Content="Pièce 3" VerticalAlignment="Center"></Label>
+                        <ComboBox Grid.Row="2" Grid.Column="1" Height="50px">
+                            <ComboBoxItem Content="Cuisine"></ComboBoxItem>
+                            <ComboBoxItem Content="Salle à manger"></ComboBoxItem>
+                            <ComboBoxItem Content="Chambre"></ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Row="2" Grid.Column="2" Height="50px">
+                            <ComboBoxItem Content="Rouge"></ComboBoxItem>
+                            <ComboBoxItem Content="Vert"></ComboBoxItem>
+                            <ComboBoxItem Content="Jaune"></ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Name="CouleurRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="CouleurRegister_Click">Enregistrer</Button>
+                    </Grid>
+                </Grid>
+                <Grid Name="ClientGrid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Nom" VerticalAlignment="Center"></Label>
+                        <Label Grid.Row="1" Grid.Column="0" Content="Prénom" VerticalAlignment="Center"></Label>
+                        <Label Grid.Row="2" Grid.Column="0" Content="Adresse" VerticalAlignment="Center"></Label>
+                        <Label Grid.Row="3" Grid.Column="0" Content="Code Postal" VerticalAlignment="Center"></Label>
+                        <Label Grid.Row="4" Grid.Column="0" Content="Ville" VerticalAlignment="Center"></Label>
+                        <Label Grid.Row="5" Grid.Column="0" Content="Téléphone" VerticalAlignment="Center"></Label>
+                        <Label Grid.Row="6" Grid.Column="0" Content="E-mail" VerticalAlignment="Center"></Label>
+                        <TextBox Grid.Column="1" Grid.Row="0" Controls:TextBoxHelper.Watermark="Saisir le nom" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1" Controls:TextBoxHelper.Watermark="Saisir le prénom" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="2" Controls:TextBoxHelper.Watermark="Saisir l'adresse" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="3" Controls:TextBoxHelper.Watermark="Saisir le code postal" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="4" Controls:TextBoxHelper.Watermark="Saisir la ville" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="5" Controls:TextBoxHelper.Watermark="Saisir le téléphone" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="6" Controls:TextBoxHelper.Watermark="Saisir l'e-mail" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                    </Grid>
+                    
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Name="ClientRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="ClientRegister_Click">Enregistrer</Button>
+                    </Grid>
+                </Grid>
+                <Grid Name="PaiementGrid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Type de paiement" VerticalAlignment="Center"></Label>
+                        <ComboBox Grid.Row="0" Grid.Column="1" Height="50px">
+                            <ComboBoxItem Content="Carte bleue"></ComboBoxItem>
+                            <ComboBoxItem Content="Chèque"></ComboBoxItem>
+                            <ComboBoxItem Content="Espèce"></ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Name="PaiementRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="PaiementRegister_Click">Enregistrer</Button>
+                    </Grid>
+                </Grid>
+                <Grid Name="DemoGrid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label>Insérer la 3D</Label>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Name="DemoRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="DemoRegister_Click">Enregistrer</Button>
+                    </Grid>
+                </Grid>
+                <Grid Name="EnvoiGrid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label>Insérer l'envoi</Label>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Name="EnvoiRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="EnvoiRegister_Click">Fin</Button>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Name="Three" Visibility="Hidden" Margin="100px">
+            
         </Grid>
     </Grid>
 </Page>

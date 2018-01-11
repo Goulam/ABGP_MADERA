@@ -12,7 +12,7 @@
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
             <Button Name="MesDevis" Content="Mes devis" Click="Devis" Visibility="Hidden"/>
-            <Button Name="NewDevis" Content="Nouveau Devis" Click="New" Visibility="Hidden"/>
+            <Button Name="NewDevis" Content="Créer un devis" Click="New" Visibility="Hidden"/>
             <Button Name ="Connect" Click="Connect_Click"/>
         </Controls:WindowCommands>
     </Controls:MetroWindow.RightWindowCommands>
