@@ -67,13 +67,13 @@
                     <ColumnDefinition Width="1*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Button Name="Gamme" Content ="1 - Gamme" Grid.Column="0" Height="50px" Margin="2px" Click="Gamme_Click"></Button>
-                <Button Name="Finition" Content ="2 - Finition" Grid.Column="1" Height="50px" Margin="2px" Click="Finition_Click" IsEnabled="False"></Button>
-                <Button Name="Modèle" Content ="3 - Modèle" Grid.Column="2" Height="50px" Margin="2px" Click="Modèle_Click" IsEnabled="False"></Button>
-                <Button Name="Couleur" Content ="4 - Couleur" Grid.Column="3" Height="50px" Margin="2px" Click="Couleur_Click" IsEnabled="False"></Button>
-                <Button Name="Client" Content ="5 - Client" Grid.Column="4" Height="50px" Margin="2px" Click="Client_Click" IsEnabled="False"></Button>
-                <Button Name="Paiement" Content ="6 - Paiement" Grid.Column="5" Height="50px" Margin="2px" Click="Paiement_Click" IsEnabled="False"></Button>
-                <Button Name="Demo" Content ="7 - Démonstration" Grid.Column="6" Height="50px" Margin="2px" Click="Demo_Click" IsEnabled="False"></Button>
-                <Button Name="Envoi" Content ="8 - Envoi" Grid.Column="7" Height="50px" Margin="2px" Click="Envoi_Click" IsEnabled="False"></Button>
+                <Button Name="Finition" Content ="2 - Finition" Grid.Column="1" Height="50px" Margin="2px" IsEnabled="False"></Button>
+                <Button Name="Modèle" Content ="3 - Modèle" Grid.Column="2" Height="50px" Margin="2px" IsEnabled="False"></Button>
+                <Button Name="Couleur" Content ="4 - Couleur" Grid.Column="3" Height="50px" Margin="2px" IsEnabled="False"></Button>
+                <Button Name="Client" Content ="5 - Client" Grid.Column="4" Height="50px" Margin="2px" IsEnabled="False"></Button>
+                <Button Name="Paiement" Content ="6 - Paiement" Grid.Column="5" Height="50px" Margin="2px" IsEnabled="False"></Button>
+                <Button Name="Demo" Content ="7 - Démonstration" Grid.Column="6" Height="50px" Margin="2px" IsEnabled="False"></Button>
+                <Button Name="Envoi" Content ="8 - Envoi" Grid.Column="7" Height="50px" Margin="2px"  IsEnabled="False"></Button>
             </Grid>
             <Grid Name ="ContentGridAll" Grid.Row="1">
                 <Grid Name="BaseGrid">
@@ -135,8 +135,10 @@
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Button Name="GammeRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="GammeRegister_Click">Enregistrer</Button>
+                        <Button Name="GammeRegister" Grid.Column="2" Style="{StaticResource AccentedSquareButtonStyle}" Click="GammeRegister_Click">Suivant</Button>
+                        <Button Name="GammeReback" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="GammeReback_Click">Précedent</Button>
                     </Grid>
                 </Grid>
                 <Grid Name="FinitionGrid" Visibility="Hidden">
@@ -163,8 +165,10 @@
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Button Name="FinitionRegister"  Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="FinitionRegister_Click">Enregistrer</Button>
+                        <Button Name="FinitionRegister"  Grid.Column="2" Style="{StaticResource AccentedSquareButtonStyle}" Click="FinitionRegister_Click">Suivant</Button>
+                        <Button Name="FinitionReback"  Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="FinitionReback_Click">Précédent</Button>
                     </Grid>
                 </Grid>
                 <Grid Name="ModeleGrid" Visibility="Hidden">
@@ -193,8 +197,10 @@
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Button Name="ModeleRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="ModeleRegister_Click">Enregistrer</Button>
+                        <Button Name="ModeleRegister" Grid.Column="2" Style="{StaticResource AccentedSquareButtonStyle}" Click="ModeleRegister_Click">Suivant</Button>
+                        <Button Name="ModeleReback" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="ModeleReback_Click">Précédent</Button>
                     </Grid>
                 </Grid>
                 <Grid Name="CouleurGrid" Visibility="Hidden">
@@ -252,8 +258,10 @@
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Button Name="CouleurRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="CouleurRegister_Click">Enregistrer</Button>
+                        <Button Name="CouleurRegister" Grid.Column="2" Style="{StaticResource AccentedSquareButtonStyle}" Click="CouleurRegister_Click">Suivant</Button>
+                        <Button Name="CouleurReback" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="CouleurReback_Click">Précédent</Button>
                     </Grid>
                 </Grid>
                 <Grid Name="ClientGrid" Visibility="Hidden">
@@ -296,8 +304,10 @@
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Button Name="ClientRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="ClientRegister_Click">Enregistrer</Button>
+                        <Button Name="ClientRegister" Grid.Column="2" Style="{StaticResource AccentedSquareButtonStyle}" Click="ClientRegister_Click">Suivant</Button>
+                        <Button Name="ClientReback" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="ClientReback_Click">Précedent</Button>
                     </Grid>
                 </Grid>
                 <Grid Name="PaiementGrid" Visibility="Hidden">
@@ -327,8 +337,10 @@
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Button Name="PaiementRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="PaiementRegister_Click">Enregistrer</Button>
+                        <Button Name="PaiementRegister" Grid.Column="2" Style="{StaticResource AccentedSquareButtonStyle}" Click="PaiementRegister_Click">Suivant</Button>
+                        <Button Name="PaiementReback" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="PaiementReback_Click">Précédent</Button>
                     </Grid>
                 </Grid>
                 <Grid Name="DemoGrid" Visibility="Hidden">
@@ -344,8 +356,10 @@
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Button Name="DemoRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="DemoRegister_Click">Enregistrer</Button>
+                        <Button Name="DemoRegister" Grid.Column="2" Style="{StaticResource AccentedSquareButtonStyle}" Click="DemoRegister_Click">Suivant</Button>
+                        <Button Name="DemoReback" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="DemoReback_Click">Précédent</Button>
                     </Grid>
                 </Grid>
                 <Grid Name="EnvoiGrid" Visibility="Hidden">
@@ -361,8 +375,10 @@
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Button Name="EnvoiRegister" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="EnvoiRegister_Click">Fin</Button>
+                        <Button Name="EnvoiRegister" Grid.Column="2" Style="{StaticResource AccentedSquareButtonStyle}" Click="EnvoiRegister_Click">Terminé</Button>
+                        <Button Name="EnvoiReback" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="EnvoiReback_Click">Précédent</Button>
                     </Grid>
                 </Grid>
             </Grid>

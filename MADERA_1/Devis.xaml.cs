@@ -50,22 +50,9 @@ namespace MADERA_1
         {
             //enregistrer les données saisies
             GammeGrid.Visibility = Visibility.Hidden;
-            BaseGrid.Visibility = Visibility.Visible;
-            Gamme.IsEnabled = false;
-            Finition.IsEnabled = true;
-            Modèle.IsEnabled = false;
-            Couleur.IsEnabled = false;
-            Client.IsEnabled = false;
-            Paiement.IsEnabled = false;
-            Demo.IsEnabled = false;
-            Envoi.IsEnabled = false;
-        }
-
-        private void Finition_Click(object sender, RoutedEventArgs e)
-        {
-            BaseGrid.Visibility = Visibility.Hidden;
             FinitionGrid.Visibility = Visibility.Visible;
             Gamme.IsEnabled = false;
+            Finition.IsEnabled = true;
             Modèle.IsEnabled = false;
             Couleur.IsEnabled = false;
             Client.IsEnabled = false;
@@ -78,23 +65,10 @@ namespace MADERA_1
         {
             //enregistrer les données saisies
             FinitionGrid.Visibility = Visibility.Hidden;
-            BaseGrid.Visibility = Visibility.Visible;
-            Gamme.IsEnabled = false;
-            Finition.IsEnabled = false;
-            Modèle.IsEnabled = true;
-            Couleur.IsEnabled = false;
-            Client.IsEnabled = false;
-            Paiement.IsEnabled = false;
-            Demo.IsEnabled = false;
-            Envoi.IsEnabled = false;
-        }
-
-        private void Modèle_Click(object sender, RoutedEventArgs e)
-        {
-            BaseGrid.Visibility = Visibility.Hidden;
             ModeleGrid.Visibility = Visibility.Visible;
             Gamme.IsEnabled = false;
             Finition.IsEnabled = false;
+            Modèle.IsEnabled = true;
             Couleur.IsEnabled = false;
             Client.IsEnabled = false;
             Paiement.IsEnabled = false;
@@ -106,20 +80,6 @@ namespace MADERA_1
         {
             //enregistrer les données saisies
             ModeleGrid.Visibility = Visibility.Hidden;
-            BaseGrid.Visibility = Visibility.Visible;
-            Gamme.IsEnabled = false;
-            Finition.IsEnabled = false;
-            Modèle.IsEnabled = false;
-            Couleur.IsEnabled = true;
-            Client.IsEnabled = false;
-            Paiement.IsEnabled = false;
-            Demo.IsEnabled = false;
-            Envoi.IsEnabled = false;
-        }
-
-        private void Couleur_Click(object sender, RoutedEventArgs e)
-        {
-            BaseGrid.Visibility = Visibility.Hidden;
             CouleurGrid.Visibility = Visibility.Visible;
             Gamme.IsEnabled = false;
             Finition.IsEnabled = false;
@@ -135,20 +95,6 @@ namespace MADERA_1
         {
             //enregistrer les données saisies
             CouleurGrid.Visibility = Visibility.Hidden;
-            BaseGrid.Visibility = Visibility.Visible;
-            Gamme.IsEnabled = false;
-            Finition.IsEnabled = false;
-            Modèle.IsEnabled = false;
-            Couleur.IsEnabled = false;
-            Client.IsEnabled = true;
-            Paiement.IsEnabled = false;
-            Demo.IsEnabled = false;
-            Envoi.IsEnabled = false;
-        }
-
-        private void Client_Click(object sender, RoutedEventArgs e)
-        {
-            BaseGrid.Visibility = Visibility.Hidden;
             ClientGrid.Visibility = Visibility.Visible;
             Gamme.IsEnabled = false;
             Finition.IsEnabled = false;
@@ -160,24 +106,11 @@ namespace MADERA_1
             Envoi.IsEnabled = false;
         }
 
+
         private void ClientRegister_Click(object sender, RoutedEventArgs e)
         {
             //enregistrer les données saisies
             ClientGrid.Visibility = Visibility.Hidden;
-            BaseGrid.Visibility = Visibility.Visible;
-            Gamme.IsEnabled = false;
-            Finition.IsEnabled = false;
-            Modèle.IsEnabled = false;
-            Couleur.IsEnabled = false;
-            Client.IsEnabled = false;
-            Paiement.IsEnabled = true;
-            Demo.IsEnabled = false;
-            Envoi.IsEnabled = false;
-        }
-
-        private void Paiement_Click(object sender, RoutedEventArgs e)
-        {
-            BaseGrid.Visibility = Visibility.Hidden;
             PaiementGrid.Visibility = Visibility.Visible;
             Gamme.IsEnabled = false;
             Finition.IsEnabled = false;
@@ -193,20 +126,6 @@ namespace MADERA_1
         {
             //enregistrer les données saisies
             PaiementGrid.Visibility = Visibility.Hidden;
-            BaseGrid.Visibility = Visibility.Visible;
-            Gamme.IsEnabled = false;
-            Finition.IsEnabled = false;
-            Modèle.IsEnabled = false;
-            Couleur.IsEnabled = false;
-            Client.IsEnabled = false;
-            Paiement.IsEnabled = false;
-            Demo.IsEnabled = true;
-            Envoi.IsEnabled = false;
-        }
-
-        private void Demo_Click(object sender, RoutedEventArgs e)
-        {
-            BaseGrid.Visibility = Visibility.Hidden;
             DemoGrid.Visibility = Visibility.Visible;
             Gamme.IsEnabled = false;
             Finition.IsEnabled = false;
@@ -222,7 +141,7 @@ namespace MADERA_1
         {
             //enregistrer les données saisies
             DemoGrid.Visibility = Visibility.Hidden;
-            BaseGrid.Visibility = Visibility.Visible;
+            EnvoiGrid.Visibility = Visibility.Visible;
             Gamme.IsEnabled = false;
             Finition.IsEnabled = false;
             Modèle.IsEnabled = false;
@@ -248,18 +167,128 @@ namespace MADERA_1
             Envoi.IsEnabled = false;
         }
 
-        private void Envoi_Click(object sender, RoutedEventArgs e)
+        private void GammeReback_Click(object sender, RoutedEventArgs e)
         {
-            BaseGrid.Visibility = Visibility.Hidden;
-            EnvoiGrid.Visibility = Visibility.Visible;
-            Gamme.IsEnabled = false;
+            //enregistrer les données saisies
+            GammeGrid.Visibility = Visibility.Hidden;
+            BaseGrid.Visibility = Visibility.Visible;
+            Gamme.IsEnabled = true;
             Finition.IsEnabled = false;
             Modèle.IsEnabled = false;
             Couleur.IsEnabled = false;
             Client.IsEnabled = false;
             Paiement.IsEnabled = false;
             Demo.IsEnabled = false;
-            Envoi.IsEnabled = true;
+            Envoi.IsEnabled = false;
         }
+
+        private void FinitionReback_Click(object sender, RoutedEventArgs e)
+        {
+            //enregistrer les données saisies
+            FinitionGrid.Visibility = Visibility.Hidden;
+            GammeGrid.Visibility = Visibility.Visible;
+            Gamme.IsEnabled = true;
+            Finition.IsEnabled = false;
+            Modèle.IsEnabled = false;
+            Couleur.IsEnabled = false;
+            Client.IsEnabled = false;
+            Paiement.IsEnabled = false;
+            Demo.IsEnabled = false;
+            Envoi.IsEnabled = false;
+        }
+
+        private void ModeleReback_Click(object sender, RoutedEventArgs e)
+        {
+            //enregistrer les données saisies
+            ModeleGrid.Visibility = Visibility.Hidden;
+            FinitionGrid.Visibility = Visibility.Visible;
+            Gamme.IsEnabled = false;
+            Finition.IsEnabled = true;
+            Modèle.IsEnabled = false;
+            Couleur.IsEnabled = false;
+            Client.IsEnabled = false;
+            Paiement.IsEnabled = false;
+            Demo.IsEnabled = false;
+            Envoi.IsEnabled = false;
+        }
+
+        private void CouleurReback_Click(object sender, RoutedEventArgs e)
+        {
+            //enregistrer les données saisies
+            CouleurGrid.Visibility = Visibility.Hidden;
+            ModeleGrid.Visibility = Visibility.Visible;
+            Gamme.IsEnabled = false;
+            Finition.IsEnabled = false;
+            Modèle.IsEnabled = true;
+            Couleur.IsEnabled = false;
+            Client.IsEnabled = false;
+            Paiement.IsEnabled = false;
+            Demo.IsEnabled = false;
+            Envoi.IsEnabled = false;
+        }
+
+        private void ClientReback_Click(object sender, RoutedEventArgs e)
+        {
+            //enregistrer les données saisies
+            ClientGrid.Visibility = Visibility.Hidden;
+            CouleurGrid.Visibility = Visibility.Visible;
+            Gamme.IsEnabled = false;
+            Finition.IsEnabled = false;
+            Modèle.IsEnabled = false;
+            Couleur.IsEnabled = true;
+            Client.IsEnabled = false;
+            Paiement.IsEnabled = false;
+            Demo.IsEnabled = false;
+            Envoi.IsEnabled = false;
+        }
+
+        private void PaiementReback_Click(object sender, RoutedEventArgs e)
+        {
+            //enregistrer les données saisies
+            PaiementGrid.Visibility = Visibility.Hidden;
+            ClientGrid.Visibility = Visibility.Visible;
+            Gamme.IsEnabled = false;
+            Finition.IsEnabled = false;
+            Modèle.IsEnabled = false;
+            Couleur.IsEnabled = false;
+            Client.IsEnabled = true;
+            Paiement.IsEnabled = false;
+            Demo.IsEnabled = false;
+            Envoi.IsEnabled = false;
+        }
+
+        private void DemoReback_Click(object sender, RoutedEventArgs e)
+        {
+            //enregistrer les données saisies
+            DemoGrid.Visibility = Visibility.Hidden;
+            PaiementGrid.Visibility = Visibility.Visible;
+            Gamme.IsEnabled = false;
+            Finition.IsEnabled = false;
+            Modèle.IsEnabled = false;
+            Couleur.IsEnabled = false;
+            Client.IsEnabled = false;
+            Paiement.IsEnabled = true;
+            Demo.IsEnabled = false;
+            Envoi.IsEnabled = false;
+        }
+
+        private void EnvoiReback_Click(object sender, RoutedEventArgs e)
+        {
+            
+            //enregistrer les données saisies
+            EnvoiGrid.Visibility = Visibility.Hidden;
+            DemoGrid.Visibility = Visibility.Visible;
+            Gamme.IsEnabled = false;
+            Finition.IsEnabled = false;
+            Modèle.IsEnabled = false;
+            Couleur.IsEnabled = false;
+            Client.IsEnabled = false;
+            Paiement.IsEnabled = false;
+            Demo.IsEnabled = true;
+            Envoi.IsEnabled = false;
+            
+        }
+
+        
     }
 }
