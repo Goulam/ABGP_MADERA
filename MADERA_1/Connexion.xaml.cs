@@ -20,14 +20,31 @@ namespace MADERA_1
     /// </summary>
     public partial class Connexion : Page
     {
-        public Connexion()
+        Button Menu1;
+        Button Menu2;
+        Button Menu3;
+        public Connexion(Button menu1, Button menu2, Button menu3)
         {
             InitializeComponent();
+            this.Menu1 = menu1;
+            this.Menu2 = menu2;
+            this.Menu3 = menu3;
         }
 
         private void Enter(object sender, RoutedEventArgs e)
         {
-            this.Content = "Vous êtes connecté(e)";
+            if (NameText.Text != "" || MDPText.Text != "")
+            {
+                Menu1.Visibility = Visibility.Visible;
+                Menu2.Visibility = Visibility.Visible;
+                Menu3.Content = "Deconnexion";
+                this.Content = "Vous êtes connecté(e)";
+            } else
+            {
+                //recommencer
+            }
+            
+            
         }
     }
 }

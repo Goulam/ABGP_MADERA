@@ -45,11 +45,8 @@ namespace MADERA_1
         {
             if(Connect.Content.ToString() == "Connexion")
             {
-                Connexion connexion = new Connexion();
+                Connexion connexion = new Connexion(MesDevis, NewDevis, Connect);
                 this.Content = connexion;
-                Connect.Content = "Deconnexion";
-                MesDevis.Visibility = Visibility.Visible;
-                NewDevis.Visibility = Visibility.Visible;
             } else
             {
                 Présentation presentation = new Présentation();
