@@ -8,13 +8,13 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Accueil">
 
-    <Grid>
+    <Grid Margin="100px">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
         <Image Grid.Row="0" Source="Image/madera.jpg" Margin="20px"></Image>
-        <Grid Grid.Row="1" Margin="100px">
+        <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
@@ -55,7 +55,7 @@
                                     <Paragraph>XX%</Paragraph>
                                 </TableCell>
                             </TableRow>
-                            <TableRow Background="lightgray">
+                            <TableRow Background="DodgerBlue">
                                 <TableCell>
                                     <Paragraph>YYYY</Paragraph>
                                 </TableCell>

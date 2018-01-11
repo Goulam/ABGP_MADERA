@@ -33,19 +33,6 @@ namespace MADERA_1
             Two.Visibility = Visibility.Visible;
         }
 
-        private void Gamme_Click(object sender, RoutedEventArgs e)
-        {
-            BaseGrid.Visibility = Visibility.Hidden;
-            GammeGrid.Visibility = Visibility.Visible;
-            Finition.IsEnabled = false;
-            Modèle.IsEnabled = false;
-            Couleur.IsEnabled = false;
-            Client.IsEnabled = false;
-            Paiement.IsEnabled = false;
-            Demo.IsEnabled = false;
-            Envoi.IsEnabled = false;
-        }
-
         private void GammeRegister_Click(object sender, RoutedEventArgs e)
         {
             //enregistrer les données saisies
@@ -165,6 +152,7 @@ namespace MADERA_1
             Paiement.IsEnabled = false;
             Demo.IsEnabled = false;
             Envoi.IsEnabled = false;
+            Démarrer.Visibility = Visibility.Hidden;
         }
 
         private void GammeReback_Click(object sender, RoutedEventArgs e)
@@ -289,6 +277,18 @@ namespace MADERA_1
             
         }
 
-        
+        private void Démarrer_Click(object sender, RoutedEventArgs e)
+        {
+            BaseGrid.Visibility = Visibility.Hidden;
+            GammeGrid.Visibility = Visibility.Visible;
+            Gamme.IsEnabled = true;
+            Finition.IsEnabled = false;
+            Modèle.IsEnabled = false;
+            Couleur.IsEnabled = false;
+            Client.IsEnabled = false;
+            Paiement.IsEnabled = false;
+            Demo.IsEnabled = false;
+            Envoi.IsEnabled = false;
+        }
     }
 }

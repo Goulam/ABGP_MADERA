@@ -8,5 +8,5 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Présentation">
 
-     <Image Source="Image/madera1.jpg" Margin="150px"></Image>
+     <Image Source="Image/madera.jpg" Margin="150px"></Image>
 </Page>
