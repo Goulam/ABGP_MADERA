@@ -87,7 +87,7 @@
                         <RowDefinition Height="1*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Label Grid.Row="0" HorizontalAlignment="Center" FontSize="30" FontWeight="ExtraBold">Pour créer mon devis</Label>
-                    <Label Grid.Row="1" HorizontalAlignment="Center" FontSize="20">Plusieurs étapes : </Label>
+                    <Label Grid.Row="1" HorizontalAlignment="Center" FontSize="20">Plusieurs étapes :</Label>
                     <Label Name="GammeDefinition" Grid.Row="2" HorizontalAlignment="Center" FontSize="15">- Définir la gamme</Label>
                     <Label Name="FinitionDefinition" Grid.Row="3" HorizontalAlignment="Center" FontSize="15">- Définir la finition</Label>
                     <Label Name="CouleurDefinition" Grid.Row="4" HorizontalAlignment="Center" FontSize="15">- Définir la couleur</Label>
@@ -129,7 +129,7 @@
                             <ComboBoxItem Content="Haute Gamme"></ComboBoxItem>
                         </ComboBox>
                     </Grid>
-                    
+
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -155,18 +155,8 @@
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Row="0" Grid.Column="0" Content="Nombre de pièces" VerticalAlignment="Center"></Label>
-                        <ComboBox Grid.Row="0" Grid.Column="1" Height="50px">
-                            <ComboBoxItem Content="1"></ComboBoxItem>
-                            <ComboBoxItem Content="2"></ComboBoxItem>
-                            <ComboBoxItem Content="3"></ComboBoxItem>
-                            <ComboBoxItem Content="4"></ComboBoxItem>
-                            <ComboBoxItem Content="5"></ComboBoxItem>
-                            <ComboBoxItem Content="6"></ComboBoxItem>
-                            <ComboBoxItem Content="7"></ComboBoxItem>
-                            <ComboBoxItem Content="8"></ComboBoxItem>
-                            <ComboBoxItem Content="9"></ComboBoxItem>
-                            <ComboBoxItem Content="10"></ComboBoxItem>
-                        </ComboBox>
+                        <Controls:NumericUpDown Minimum="1" Maximum="10" Interval="1" Grid.Row="0" Grid.Column="1" Height="50px"/>
+
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
@@ -300,7 +290,7 @@
                         <TextBox Grid.Column="1" Grid.Row="5" Controls:TextBoxHelper.Watermark="Saisir le téléphone" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
                         <TextBox Grid.Column="1" Grid.Row="6" Controls:TextBoxHelper.Watermark="Saisir l'e-mail" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
                     </Grid>
-                    
+
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -376,9 +366,6 @@
                     </Grid>
                 </Grid>
             </Grid>
-        </Grid>
-        <Grid Name="Three" Visibility="Hidden" Margin="100px">
-            
         </Grid>
     </Grid>
 </Page>
