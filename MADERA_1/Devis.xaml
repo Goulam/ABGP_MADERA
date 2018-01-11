@@ -368,7 +368,20 @@
                         <RowDefinition Height="1*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <Label>Insérer l'envoi</Label>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Méthode d'envoi du devis" VerticalAlignment="Center"></Label>
+                        <ComboBox Grid.Row="0" Grid.Column="1" Height="50px">
+                            <ComboBoxItem Content="Courrier"></ComboBoxItem>
+                            <ComboBoxItem Content="E-mail"></ComboBoxItem>
+                        </ComboBox>
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
