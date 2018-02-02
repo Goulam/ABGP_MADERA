@@ -15,7 +15,7 @@
                 <RowDefinition Height="2*" />
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Source="Image/madera.jpg" Margin="20px"></Image>
-            <Grid Grid.Row="1" Margin="100px">
+            <Grid Grid.Row="2" Margin="100px">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5*" />
                     <RowDefinition Height="1*" />
@@ -29,10 +29,11 @@
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
                     </Grid.RowDefinitions>
+                    
                     <Label Name="EmailLabel" Content="Email" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Margin="5px"/>
                     <TextBox Name="EmailText" Grid.Column="1" Grid.Row="0" Controls:TextBoxHelper.Watermark="Saisir votre email" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" Height="50px"></TextBox>
                     <Label Name="MDPLabel" Grid.Column="0" Grid.Row="1" Content="Mot de passe" VerticalAlignment="Center" Margin="5px"></Label>
-                    <TextBox Name="MDPText" Grid.Column="1" Grid.Row="1" Controls:TextBoxHelper.Watermark="Saisir votre mot de passe" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" Height="50px"></TextBox>
+                    <PasswordBox Name="MDPText" Grid.Column="1" Grid.Row="1" Controls:TextBoxHelper.Watermark="Saisir votre mot de passe" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" Height="50px"></PasswordBox>
                 </Grid>
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>

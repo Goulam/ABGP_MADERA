@@ -36,25 +36,28 @@ namespace MADERA_1
         {
             //Vérifier que le mot de passe contient 8 caractères, 1 majuscule, 1 chiffre et 1 caractère spécial
 
-            
+
             //Si l'adresse email est bonne et le mot de passe correspond 8 caracteres 1 majuscule 1 chiffre
-            if ((Regex.IsMatch(EmailText.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$") && (Regex.IsMatch(MDPText.Text, "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^(.{8,15})$"))))
+            if ((Regex.IsMatch(EmailText.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$") && (Regex.IsMatch(MDPText.Password, "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^(.{8,15})$"))))
             {
                 //requete en base de donnees ou json pour selectionner le user correspondant a l'adresse email et au mot de passe 
                 //if (reussi)
                 //{
-                    Menu1.Visibility = Visibility.Visible;
-                    Menu2.Visibility = Visibility.Visible;
-                    Menu3.Content = "Deconnexion";
-                    Accueil1.Visibility = Visibility.Hidden;
-                    Accueil2.Visibility = Visibility.Visible;
+                Menu1.Visibility = Visibility.Visible;
+                Menu2.Visibility = Visibility.Visible;
+                Menu3.Content = "Deconnexion";
+                Accueil1.Visibility = Visibility.Hidden;
+                Accueil2.Visibility = Visibility.Visible;
                 //} else
                 //{
-                    //erreur de connexion
+                //erreur de connexion
                 //}
 
-            }
-            
+            } else
+            {
+                EmailText.BorderBrush = Brushes.Red;
+                MDPText.BorderBrush = Brushes.Red;
+            }        
             
             
         }

@@ -5,9 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MADERA_1"
       xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Devis">
+
 
     <Grid>
         <Grid Name="First" Margin="100px">
@@ -36,7 +38,7 @@
                     <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Date</Label>
                     <TextBox Name="NameProjectText" Grid.Column="1" Grid.Row="0" Controls:TextBoxHelper.Watermark="Saisir le nom du projet" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" Height="50px"></TextBox>
                     <TextBox Name="RefProjectText" Grid.Column="1" Grid.Row="1" Controls:TextBoxHelper.Watermark="Saisir la référence du projet" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" Height="50px"></TextBox>
-                    <TextBox Name="DateProjectText" Grid.Column="1" Grid.Row="2" Controls:TextBoxHelper.Watermark="Saisir la date du projet" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" Height="50px"></TextBox>
+                    <DatePicker Name="DateProjectText" Grid.Column="1" Grid.Row="2" Controls:TextBoxHelper.Watermark="Saisir la date du projet" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" Height="50px"></DatePicker>
                 </Grid>
                 <Grid Grid.Row="3">
                     <Grid.ColumnDefinitions>
@@ -233,33 +235,21 @@
                             <ComboBoxItem Content="Salle à manger"></ComboBoxItem>
                             <ComboBoxItem Content="Chambre"></ComboBoxItem>
                         </ComboBox>
-                        <ComboBox Grid.Row="0" Grid.Column="2" Height="50px">
-                            <ComboBoxItem Content="Rouge"></ComboBoxItem>
-                            <ComboBoxItem Content="Vert"></ComboBoxItem>
-                            <ComboBoxItem Content="Jaune"></ComboBoxItem>
-                        </ComboBox>
+                        <xctk:ColorCanvas Name="CouleurUn" Grid.Row="0" Grid.Column="2"/>
                         <Label Grid.Row="1" Grid.Column="0" Content="Pièce 2" VerticalAlignment="Center"></Label>
                         <ComboBox Grid.Row="1" Grid.Column="1" Height="50px">
                             <ComboBoxItem Content="Cuisine"></ComboBoxItem>
                             <ComboBoxItem Content="Salle à manger"></ComboBoxItem>
                             <ComboBoxItem Content="Chambre"></ComboBoxItem>
                         </ComboBox>
-                        <ComboBox Grid.Row="1" Grid.Column="2" Height="50px">
-                            <ComboBoxItem Content="Rouge"></ComboBoxItem>
-                            <ComboBoxItem Content="Vert"></ComboBoxItem>
-                            <ComboBoxItem Content="Jaune"></ComboBoxItem>
-                        </ComboBox>
+                        <xctk:ColorCanvas Name="CouleurDeux" Grid.Row="1" Grid.Column="2"/>
                         <Label Grid.Row="2" Grid.Column="0" Content="Pièce 3" VerticalAlignment="Center"></Label>
                         <ComboBox Grid.Row="2" Grid.Column="1" Height="50px">
                             <ComboBoxItem Content="Cuisine"></ComboBoxItem>
                             <ComboBoxItem Content="Salle à manger"></ComboBoxItem>
                             <ComboBoxItem Content="Chambre"></ComboBoxItem>
                         </ComboBox>
-                        <ComboBox Grid.Row="2" Grid.Column="2" Height="50px">
-                            <ComboBoxItem Content="Rouge"></ComboBoxItem>
-                            <ComboBoxItem Content="Vert"></ComboBoxItem>
-                            <ComboBoxItem Content="Jaune"></ComboBoxItem>
-                        </ComboBox>
+                        <xctk:ColorCanvas Name="CouleurTrois" Grid.Row="2" Grid.Column="2"/>
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
@@ -298,13 +288,13 @@
                         <Label Grid.Row="4" Grid.Column="0" Content="Ville" VerticalAlignment="Center"></Label>
                         <Label Grid.Row="5" Grid.Column="0" Content="Téléphone" VerticalAlignment="Center"></Label>
                         <Label Grid.Row="6" Grid.Column="0" Content="E-mail" VerticalAlignment="Center"></Label>
-                        <TextBox Grid.Column="1" Grid.Row="0" Controls:TextBoxHelper.Watermark="Saisir le nom" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
-                        <TextBox Grid.Column="1" Grid.Row="1" Controls:TextBoxHelper.Watermark="Saisir le prénom" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
-                        <TextBox Grid.Column="1" Grid.Row="2" Controls:TextBoxHelper.Watermark="Saisir l'adresse" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
-                        <TextBox Grid.Column="1" Grid.Row="3" Controls:TextBoxHelper.Watermark="Saisir le code postal" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" MaxLength="5"></TextBox>
-                        <TextBox Grid.Column="1" Grid.Row="4" Controls:TextBoxHelper.Watermark="Saisir la ville" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" ></TextBox>
-                        <TextBox Grid.Column="1" Grid.Row="5" Controls:TextBoxHelper.Watermark="Saisir le téléphone" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" MaxLength="10"></TextBox>
-                        <TextBox Grid.Column="1" Grid.Row="6" Controls:TextBoxHelper.Watermark="Saisir l'e-mail" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                        <TextBox Name="NomClient" Grid.Column="1" Grid.Row="0" Controls:TextBoxHelper.Watermark="Saisir le nom" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                        <TextBox Name="PrénomClient" Grid.Column="1" Grid.Row="1" Controls:TextBoxHelper.Watermark="Saisir le prénom" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                        <TextBox Name="AdresseClient" Grid.Column="1" Grid.Row="2" Controls:TextBoxHelper.Watermark="Saisir l'adresse" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                        <TextBox Name="CPClient" Grid.Column="1" Grid.Row="3" Controls:TextBoxHelper.Watermark="Saisir le code postal" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" MaxLength="5"></TextBox>
+                        <TextBox Name="VilleClient" Grid.Column="1" Grid.Row="4" Controls:TextBoxHelper.Watermark="Saisir la ville" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" ></TextBox>
+                        <TextBox Name="TelephoneClient" Grid.Column="1" Grid.Row="5" Controls:TextBoxHelper.Watermark="Saisir le téléphone" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" MaxLength="10"></TextBox>
+                        <TextBox Name="EmailClient" Grid.Column="1" Grid.Row="6" Controls:TextBoxHelper.Watermark="Saisir l'e-mail" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
                     </Grid>
 
                     <Grid Grid.Row="1">
