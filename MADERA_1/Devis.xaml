@@ -301,9 +301,9 @@
                         <TextBox Grid.Column="1" Grid.Row="0" Controls:TextBoxHelper.Watermark="Saisir le nom" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
                         <TextBox Grid.Column="1" Grid.Row="1" Controls:TextBoxHelper.Watermark="Saisir le prénom" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
                         <TextBox Grid.Column="1" Grid.Row="2" Controls:TextBoxHelper.Watermark="Saisir l'adresse" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
-                        <TextBox Grid.Column="1" Grid.Row="3" Controls:TextBoxHelper.Watermark="Saisir le code postal" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
-                        <TextBox Grid.Column="1" Grid.Row="4" Controls:TextBoxHelper.Watermark="Saisir la ville" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
-                        <TextBox Grid.Column="1" Grid.Row="5" Controls:TextBoxHelper.Watermark="Saisir le téléphone" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="3" Controls:TextBoxHelper.Watermark="Saisir le code postal" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" MaxLength="5"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="4" Controls:TextBoxHelper.Watermark="Saisir la ville" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" ></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="5" Controls:TextBoxHelper.Watermark="Saisir le téléphone" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" MaxLength="10"></TextBox>
                         <TextBox Grid.Column="1" Grid.Row="6" Controls:TextBoxHelper.Watermark="Saisir l'e-mail" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px"></TextBox>
                     </Grid>
 

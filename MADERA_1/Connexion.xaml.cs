@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace MADERA_1
 {
@@ -33,20 +34,27 @@ namespace MADERA_1
 
         private void Enter(object sender, RoutedEventArgs e)
         {
-            //Vérfier que NameText soit une adresse email
             //Vérifier que le mot de passe contient 8 caractères, 1 majuscule, 1 chiffre et 1 caractère spécial
-            if (EmailText.Text != "" || MDPText.Text != "")
+
+            
+            //Si l'adresse email est bonne et le mot de passe correspond 8 caracteres 1 majuscule 1 chiffre
+            if ((Regex.IsMatch(EmailText.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$") && (Regex.IsMatch(MDPText.Text, "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^(.{8,15})$"))))
             {
-                Menu1.Visibility = Visibility.Visible;
-                Menu2.Visibility = Visibility.Visible;
-                Menu3.Content = "Deconnexion";
-                Accueil1.Visibility = Visibility.Hidden;
-                Accueil2.Visibility = Visibility.Visible;
-            } else
-            {
-                //afficher une erreur
-                //recommencer
+                //requete en base de donnees ou json pour selectionner le user correspondant a l'adresse email et au mot de passe 
+                //if (reussi)
+                //{
+                    Menu1.Visibility = Visibility.Visible;
+                    Menu2.Visibility = Visibility.Visible;
+                    Menu3.Content = "Deconnexion";
+                    Accueil1.Visibility = Visibility.Hidden;
+                    Accueil2.Visibility = Visibility.Visible;
+                //} else
+                //{
+                    //erreur de connexion
+                //}
+
             }
+            
             
             
         }
