@@ -29,8 +29,8 @@
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
                     </Grid.RowDefinitions>
-                    <Label Name="NameLabel" Content="Email" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Margin="5px"/>
-                    <TextBox Name="NameText" Grid.Column="1" Grid.Row="0" Controls:TextBoxHelper.Watermark="Saisir votre email" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" Height="50px"></TextBox>
+                    <Label Name="EmailLabel" Content="Email" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Margin="5px"/>
+                    <TextBox Name="EmailText" Grid.Column="1" Grid.Row="0" Controls:TextBoxHelper.Watermark="Saisir votre email" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" Height="50px"></TextBox>
                     <Label Name="MDPLabel" Grid.Column="0" Grid.Row="1" Content="Mot de passe" VerticalAlignment="Center" Margin="5px"></Label>
                     <TextBox Name="MDPText" Grid.Column="1" Grid.Row="1" Controls:TextBoxHelper.Watermark="Saisir votre mot de passe" Controls:TextBoxHelper.ClearTextButton="True" Margin="5px" Height="50px"></TextBox>
                 </Grid>
@@ -40,7 +40,7 @@
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Connexion" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="Enter"></Button>
+                    <Button Name="Connexion" Content="Connexion" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="Enter"></Button>
                 </Grid>
 
             </Grid>

@@ -35,7 +35,7 @@ namespace MADERA_1
         {
             //Vérfier que NameText soit une adresse email
             //Vérifier que le mot de passe contient 8 caractères, 1 majuscule, 1 chiffre et 1 caractère spécial
-            if (NameText.Text != "" || MDPText.Text != "")
+            if (EmailText.Text != "" || MDPText.Text != "")
             {
                 Menu1.Visibility = Visibility.Visible;
                 Menu2.Visibility = Visibility.Visible;
