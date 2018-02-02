@@ -24,11 +24,5 @@ namespace MADERA_1
         {
             InitializeComponent();
         }
-
-        private void New(object sender, RoutedEventArgs e)
-        {
-            Devis devis = new Devis();
-            this.Content = devis;
-        }
     }
 }

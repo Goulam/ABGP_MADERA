@@ -19,18 +19,10 @@
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
             <FlowDocumentReader Grid.Row="0" ViewingMode="Scroll">
+                <!-- Regarder pour remplir le tableau automatiquement -->
                 <FlowDocument>
                     <Table CellSpacing="5">
-
-                        <Table.Columns>
-                            <TableColumn/>
-                            <TableColumn/>
-                            <TableColumn/>
-                            <TableColumn/>
-                        </Table.Columns>
-
                         <TableRowGroup>
-
                             <!-- Header row for the table. -->
                             <TableRow Background="White">
                                 <TableCell>
@@ -43,7 +35,7 @@
                                     <Paragraph FontSize="14pt" FontWeight="Bold">Paiement</Paragraph>
                                 </TableCell>
                             </TableRow>
-
+                            <!-- First Line -->
                             <TableRow>
                                 <TableCell>
                                     <Paragraph>XXXX</Paragraph>
@@ -55,6 +47,7 @@
                                     <Paragraph>XX%</Paragraph>
                                 </TableCell>
                             </TableRow>
+                            <!-- Second Line -->
                             <TableRow Background="DodgerBlue">
                                 <TableCell>
                                     <Paragraph>YYYY</Paragraph>

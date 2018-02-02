@@ -33,14 +33,18 @@ namespace MADERA_1
 
         private void Enter(object sender, RoutedEventArgs e)
         {
+            //Vérfier que NameText soit une adresse email
+            //Vérifier que le mot de passe contient 8 caractères, 1 majuscule, 1 chiffre et 1 caractère spécial
             if (NameText.Text != "" || MDPText.Text != "")
             {
                 Menu1.Visibility = Visibility.Visible;
                 Menu2.Visibility = Visibility.Visible;
                 Menu3.Content = "Deconnexion";
-                this.Content = "Vous êtes connecté(e)";
+                Accueil1.Visibility = Visibility.Hidden;
+                Accueil2.Visibility = Visibility.Visible;
             } else
             {
+                //afficher une erreur
                 //recommencer
             }
             
