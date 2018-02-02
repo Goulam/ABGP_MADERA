@@ -106,18 +106,23 @@
                             <RowDefinition Height="1*"></RowDefinition>
                             <RowDefinition Height="2*"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
 
-                        <Label Grid.Row="0" Grid.Column="0" Content="Gamme" VerticalAlignment="Center"></Label>
-                        <ComboBox Grid.Row="0" Grid.Column="1" Height="50px">
-                            <ComboBoxItem Content="Low Cost"></ComboBoxItem>
-                            <ComboBoxItem Content="Milieu Gamme"></ComboBoxItem>
-                            <ComboBoxItem Content="Haute Gamme"></ComboBoxItem>
-                        </ComboBox>
-                        <Label Grid.Row="0" Grid.Column="0" Content="Afficher les différentes maisons ici"></Label>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Content="Gamme" VerticalAlignment="Center"></Label>
+                            <ComboBox Grid.Column="1" Height="50px">
+                                <ComboBoxItem Content="Low Cost"></ComboBoxItem>
+                                <ComboBoxItem Content="Milieu Gamme"></ComboBoxItem>
+                                <ComboBoxItem Content="Haute Gamme"></ComboBoxItem>
+                            </ComboBox>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Label Content="Afficher les différentes maisons ici" HorizontalAlignment="Center"></Label>
+                        </Grid>
+                        
                     </Grid>
 
                     <Grid Grid.Row="1">

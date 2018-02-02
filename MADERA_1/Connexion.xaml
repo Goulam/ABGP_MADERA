@@ -40,7 +40,7 @@
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Name="Connexion" Content="Connexion" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="Enter"></Button>
+                    <Button Name="SeConnecter" Content="Connexion" Grid.Column="1" Style="{StaticResource AccentedSquareButtonStyle}" Click="Enter"></Button>
                 </Grid>
 
             </Grid>
