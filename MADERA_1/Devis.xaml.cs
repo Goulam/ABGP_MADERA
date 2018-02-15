@@ -33,17 +33,52 @@ namespace MADERA_1
 
         private void Register(object sender, RoutedEventArgs e)
         {
-            //enregistrer
-            //envoyer sur le nouvel ecran
-            First.Visibility = Visibility.Hidden;
-            Two.Visibility = Visibility.Visible;
-            NomProjet = NameProjectText.Text;
-            RefProjet = RefProjectText.Text;
-            DateProjet = DateProjectText.Text;
+            if (NameProjectText.Text == "" || RefProjectText.Text == "" || DateProjectText.Text == "")
+            {
+                if (NameProjectText.Text == "")
+                {
+                    NameProjectText.BorderBrush = Brushes.Red;
+                }
+                if(RefProjectText.Text == "")
+                {
+                    RefProjectText.BorderBrush = Brushes.Red;
+                }
+                if(DateProjectText.Text == "")
+                {
+                    DateProjectText.BorderBrush = Brushes.Red;
+                }
+            }
+            else
+            {
+                NomProjet = NameProjectText.Text;
+                RefProjet = RefProjectText.Text;
+                DateProjet = DateProjectText.Text;
+
+                First.Visibility = Visibility.Hidden;
+                Two.Visibility = Visibility.Visible;
+            }
+            
+        }
+
+        private void GammeRegisterView_Click(object sender, RoutedEventArgs e)
+        {
+            if (GammeProjetChoice.SelectedValue == null)
+            {
+                GammeProjetChoice.BorderBrush = Brushes.Red;
+            }
+            else
+            {
+                GammeProjet = GammeProjetChoice.SelectedValue.ToString();
+                MaisonView.Visibility = Visibility.Visible;
+                ValidationGamme.Visibility = Visibility.Visible;
+            }
         }
 
         private void GammeRegister_Click(object sender, RoutedEventArgs e)
         {
+            //if(MaisonViewChoice == null) {
+            //  MaisonViewChoice.BorderBrushes = Brushes.Red
+            //} else {
             //enregistrer les données saisies
             GammeGrid.Visibility = Visibility.Hidden;
             FinitionGrid.Visibility = Visibility.Visible;
@@ -55,21 +90,40 @@ namespace MADERA_1
             Paiement.IsEnabled = false;
             Demo.IsEnabled = false;
             Envoi.IsEnabled = false;
+            //}
         }
 
         private void FinitionRegister_Click(object sender, RoutedEventArgs e)
         {
-            //enregistrer les données saisies
-            FinitionGrid.Visibility = Visibility.Hidden;
-            ModeleGrid.Visibility = Visibility.Visible;
-            Gamme.IsEnabled = false;
-            Finition.IsEnabled = false;
-            Modèle.IsEnabled = true;
-            Couleur.IsEnabled = false;
-            Client.IsEnabled = false;
-            Paiement.IsEnabled = false;
-            Demo.IsEnabled = false;
-            Envoi.IsEnabled = false;
+            if (IsolantChoice.SelectedValue == null || CouvertureChoice.SelectedValue == null || RevetementChoice.SelectedValue == null)
+            {
+                if (IsolantChoice.SelectedValue == null)
+                {
+                    IsolantChoice.BorderBrush = Brushes.Red;
+                }
+                if (CouvertureChoice.SelectedValue == null)
+                {
+                    CouvertureChoice.BorderBrush = Brushes.Red;
+                }
+                if (RevetementChoice.SelectedValue == null)
+                {
+                    RevetementChoice.BorderBrush = Brushes.Red;
+                }
+            }
+            else
+            {
+                //enregistrer les données saisies
+                FinitionGrid.Visibility = Visibility.Hidden;
+                ModeleGrid.Visibility = Visibility.Visible;
+                Gamme.IsEnabled = false;
+                Finition.IsEnabled = false;
+                Modèle.IsEnabled = true;
+                Couleur.IsEnabled = false;
+                Client.IsEnabled = false;
+                Paiement.IsEnabled = false;
+                Demo.IsEnabled = false;
+                Envoi.IsEnabled = false;
+            }
         }
 
         private void ModeleRegister_Click(object sender, RoutedEventArgs e)
@@ -108,57 +162,81 @@ namespace MADERA_1
 
         private void ClientRegister_Click(object sender, RoutedEventArgs e)
         {
-            if (Regex.IsMatch(CPClient.Text, @"^\d{5}$"))
+            if(NomClient.Text == "" ||
+                PrénomClient.Text == "" ||
+                AdresseClient.Text == "" ||
+                CPClient.Text == "" ||
+                VilleClient.Text == "" ||
+                TelephoneClient.Text == "" ||
+                EmailClient.Text == "" ||
+                Regex.IsMatch(CPClient.Text, @"^\d{5}$") ||
+                Regex.IsMatch(TelephoneClient.Text, @"^[1-9]\d{2}-[1-9]\d{2}-\d{4}$") ||
+                Regex.IsMatch(EmailClient.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
             {
-                CodePostal = CPClient.Text;
-                if (Regex.IsMatch(TelephoneClient.Text, @"^[1-9]\d{2}-[1-9]\d{2}-\d{4}$"))
+                if(NomClient.Text == "")
                 {
-                    Telephone = TelephoneClient.Text;
-                    if (Regex.IsMatch(EmailClient.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
-                    {
-                        Email = EmailClient.Text;
-                        ClientGrid.Visibility = Visibility.Hidden;
-                        PaiementGrid.Visibility = Visibility.Visible;
-                        Gamme.IsEnabled = false;
-                        Finition.IsEnabled = false;
-                        Modèle.IsEnabled = false;
-                        Couleur.IsEnabled = false;
-                        Client.IsEnabled = false;
-                        Paiement.IsEnabled = true;
-                        Demo.IsEnabled = false;
-                        Envoi.IsEnabled = false;
-                    }
+                    NomClient.BorderBrush = Brushes.Red;
                 }
-            }
-            else
+                if(PrénomClient.Text == "")
+                {
+                    PrénomClient.BorderBrush = Brushes.Red;
+                }
+                if (AdresseClient.Text == "")
+                {
+                    AdresseClient.BorderBrush = Brushes.Red;
+                }
+                if (CPClient.Text == "" || Regex.IsMatch(CPClient.Text, @"^\d{5}$"))
+                {
+                    CPClient.BorderBrush = Brushes.Red;
+                }
+                if(VilleClient.Text == "")
+                {
+                    VilleClient.BorderBrush = Brushes.Red;
+                }
+                if(TelephoneClient.Text == "" || Regex.IsMatch(TelephoneClient.Text, @"^[1-9]\d{2}-[1-9]\d{2}-\d{4}$"))
+                {
+                    TelephoneClient.BorderBrush = Brushes.Red;
+                }
+                if(EmailClient.Text == "" || Regex.IsMatch(EmailClient.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
+                {
+                    EmailClient.BorderBrush = Brushes.Red;
+                } 
+            } else
             {
-                CPClient.BorderBrush = Brushes.Red;
-                ClientGrid.Visibility = Visibility.Visible;
+                Email = EmailClient.Text;
+                ClientGrid.Visibility = Visibility.Hidden;
+                PaiementGrid.Visibility = Visibility.Visible;
                 Gamme.IsEnabled = false;
                 Finition.IsEnabled = false;
                 Modèle.IsEnabled = false;
                 Couleur.IsEnabled = false;
-                Client.IsEnabled = true;
-                Paiement.IsEnabled = false;
+                Client.IsEnabled = false;
+                Paiement.IsEnabled = true;
                 Demo.IsEnabled = false;
                 Envoi.IsEnabled = false;
             }
-
         }
 
         private void PaiementRegister_Click(object sender, RoutedEventArgs e)
         {
-            //enregistrer les données saisies
-            PaiementGrid.Visibility = Visibility.Hidden;
-            DemoGrid.Visibility = Visibility.Visible;
-            Gamme.IsEnabled = false;
-            Finition.IsEnabled = false;
-            Modèle.IsEnabled = false;
-            Couleur.IsEnabled = false;
-            Client.IsEnabled = false;
-            Paiement.IsEnabled = false;
-            Demo.IsEnabled = true;
-            Envoi.IsEnabled = false;
+            if(PaimentChoice.SelectedValue == null)
+            {
+                PaimentChoice.BorderBrush = Brushes.Red;
+            } else
+            {
+                //enregistrer les données saisies
+                PaiementGrid.Visibility = Visibility.Hidden;
+                DemoGrid.Visibility = Visibility.Visible;
+                Gamme.IsEnabled = false;
+                Finition.IsEnabled = false;
+                Modèle.IsEnabled = false;
+                Couleur.IsEnabled = false;
+                Client.IsEnabled = false;
+                Paiement.IsEnabled = false;
+                Demo.IsEnabled = true;
+                Envoi.IsEnabled = false;
+            }
+            
         }
 
         private void DemoRegister_Click(object sender, RoutedEventArgs e)
