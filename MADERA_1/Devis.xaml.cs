@@ -169,9 +169,9 @@ namespace MADERA_1
                 VilleClient.Text == "" ||
                 TelephoneClient.Text == "" ||
                 EmailClient.Text == "" ||
-                Regex.IsMatch(CPClient.Text, @"^\d{5}$") ||
-                Regex.IsMatch(TelephoneClient.Text, @"^[1-9]\d{2}-[1-9]\d{2}-\d{4}$") ||
-                Regex.IsMatch(EmailClient.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
+                !Regex.IsMatch(CPClient.Text, @"^\d{5}$") ||
+                !Regex.IsMatch(TelephoneClient.Text, @"^(0|\+33)[1-9]([-. ]?[0-9]{2}){4}$") ||
+                !Regex.IsMatch(EmailClient.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
             {
                 if(NomClient.Text == "")
                 {
@@ -185,7 +185,7 @@ namespace MADERA_1
                 {
                     AdresseClient.BorderBrush = Brushes.Red;
                 }
-                if (CPClient.Text == "" || Regex.IsMatch(CPClient.Text, @"^\d{5}$"))
+                if (CPClient.Text == "" || !Regex.IsMatch(CPClient.Text, @"^\d{5}$"))
                 {
                     CPClient.BorderBrush = Brushes.Red;
                 }
@@ -193,11 +193,11 @@ namespace MADERA_1
                 {
                     VilleClient.BorderBrush = Brushes.Red;
                 }
-                if(TelephoneClient.Text == "" || Regex.IsMatch(TelephoneClient.Text, @"^[1-9]\d{2}-[1-9]\d{2}-\d{4}$"))
+                if(TelephoneClient.Text == "" || !Regex.IsMatch(TelephoneClient.Text, @"^(0|\+33)[1-9]([-. ]?[0-9]{2}){4}$"))
                 {
                     TelephoneClient.BorderBrush = Brushes.Red;
                 }
-                if(EmailClient.Text == "" || Regex.IsMatch(EmailClient.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
+                if(EmailClient.Text == "" || !Regex.IsMatch(EmailClient.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
                 {
                     EmailClient.BorderBrush = Brushes.Red;
                 } 
