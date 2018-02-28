@@ -68,6 +68,24 @@ namespace MADERA_1
             }
             else
             {
+                if(GammeProjetChoice.Text == "Low Cost")
+                {
+                    BasDeGamme.Visibility = Visibility.Visible;
+                    MoyenneGamme.Visibility = Visibility.Hidden;
+                    HautDeGamme.Visibility = Visibility.Hidden;
+                }
+                else if (GammeProjetChoice.Text == "Milieu Gamme")
+                {
+                    BasDeGamme.Visibility = Visibility.Hidden;
+                    MoyenneGamme.Visibility = Visibility.Visible;
+                    HautDeGamme.Visibility = Visibility.Hidden;
+                }
+                else if (GammeProjetChoice.Text == "Haute Gamme")
+                {
+                    BasDeGamme.Visibility = Visibility.Hidden;
+                    MoyenneGamme.Visibility = Visibility.Hidden;
+                    HautDeGamme.Visibility = Visibility.Visible;
+                }
                 GammeProjet = GammeProjetChoice.SelectedValue.ToString();
                 MaisonView.Visibility = Visibility.Visible;
                 ValidationGamme.Visibility = Visibility.Visible;
@@ -313,6 +331,36 @@ namespace MADERA_1
             Paiement.IsEnabled = false;
             Demo.IsEnabled = false;
             Envoi.IsEnabled = false;
+        }
+
+        private void BasGamme1_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BasGamme2_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void MoyenneGamme1_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void MoyenneGamme2_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void HautDeGamme1_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void HautDeGamme2_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void HautDeGamme3_Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void CouleurReback_Click(object sender, RoutedEventArgs e)

@@ -131,7 +131,79 @@
                             <Button Grid.Column="1" Content="Valider" Style="{StaticResource AccentedSquareButtonStyle}" Click="GammeRegisterView_Click" Margin="2px"></Button>
                         </Grid>
                         <Grid Name="MaisonView" Grid.Row="2" Margin="50px" Visibility="Hidden">
-                            <Label Content="Afficher les différentes maisons ici" HorizontalAlignment="Center"></Label>
+                            <Grid Name="BasDeGamme" Visibility="Hidden">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                    <RowDefinition Height="2*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center">Bas de gamme 1</Label>
+                                <Grid Grid.Column="0" Grid.Row="1">
+                                    <Button Click="BasGamme1_Button_Click">
+                                        <Image Source="Image/bas de gamme 1.jpg" Margin="20px"></Image>
+                                    </Button>
+                                </Grid>
+                                <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center">Bas de gamme 2</Label>
+                                <Grid Grid.Column="1" Grid.Row="1">
+                                    <Button Click="BasGamme2_Button_Click">
+                                        <Image Source="Image/bas de gamme 2.jpg" Margin="20px"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                            <Grid Name="MoyenneGamme" Visibility="Hidden">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                    <RowDefinition Height="2*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center">Moyenne gamme 1</Label>
+                                <Grid Grid.Column="0" Grid.Row="1">
+                                    <Button Click="MoyenneGamme1_Button_Click">
+                                        <Image Source="Image/moyenne gamme 1.jpg" Margin="20px"></Image>
+                                    </Button>
+                                </Grid>
+                                <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center">Moyenne gamme 2</Label>
+                                <Grid Grid.Column="1" Grid.Row="1">
+                                    <Button Click="MoyenneGamme2_Button_Click">
+                                        <Image Source="Image/moyenne gamme 2.jpg" Margin="20px"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                            <Grid Name="HautDeGamme" Visibility="Hidden">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                    <RowDefinition Height="3*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center">Haut de gamme 1</Label>
+                                <Grid Grid.Column="0" Grid.Row="1">
+                                    <Button Click="HautDeGamme1_Button_Click">
+                                        <Image Source="Image/haut de gamme 1.jpg" Margin="20px"></Image>
+                                    </Button>
+                                </Grid>
+                                <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center">Haut de gamme 2</Label>
+                                <Grid Grid.Column="1" Grid.Row="1">
+                                    <Button Click="HautDeGamme2_Button_Click">
+                                        <Image Source="Image/haut de gamme 2.jpg" Margin="20px"></Image>
+                                    </Button>
+                                </Grid>
+                                <Label Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center">Haut de gamme 3</Label>
+                                <Grid Grid.Column="2" Grid.Row="1">
+                                    <Button Click="HautDeGamme3_Button_Click">
+                                        <Image Source="Image/haut de gamme 3.jpg" Margin="20px"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
                         </Grid>
                         
                     </Grid>
