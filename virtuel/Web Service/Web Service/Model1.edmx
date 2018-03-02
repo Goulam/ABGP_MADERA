@@ -41,7 +41,7 @@
           <Key>
             <PropertyRef Name="Cli_Index" />
           </Key>
-          <Property Name="Cli_Index" Type="int" Nullable="false" />
+          <Property Name="Cli_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Cli_Nom" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Cli_Prenom" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Cli_Adresse" Type="varchar" MaxLength="255" />
@@ -64,7 +64,7 @@
           <Key>
             <PropertyRef Name="Comma_Index" />
           </Key>
-          <Property Name="Comma_Index" Type="int" Nullable="false" />
+          <Property Name="Comma_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Comma_Prix" Type="decimal" Precision="38" Scale="0" Nullable="false" />
           <Property Name="Comma_Actif" Type="int" />
         </EntityType>
@@ -72,7 +72,7 @@
           <Key>
             <PropertyRef Name="Com_Index" />
           </Key>
-          <Property Name="Com_Index" Type="int" Nullable="false" />
+          <Property Name="Com_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Com_Nom" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Com_Identifiant" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Com_Mdp" Type="varchar" MaxLength="255" Nullable="false" />
@@ -82,7 +82,7 @@
           <Key>
             <PropertyRef Name="Comp_Index" />
           </Key>
-          <Property Name="Comp_Index" Type="int" Nullable="false" />
+          <Property Name="Comp_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Comp_Nom" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Comp_Type" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Comp_Couleur" Type="varchar" MaxLength="255" Nullable="false" />
@@ -111,6 +111,7 @@
           </Key>
           <Property Name="Comp_Index" Type="int" Nullable="false" />
           <Property Name="Mod_Index" Type="int" Nullable="false" />
+          <Property Name="Comp_Nbr" Type="int" />
         </EntityType>
         <EntityType Name="MDR_Contient_Modeles_Devis">
           <Key>
@@ -148,7 +149,7 @@
           <Key>
             <PropertyRef Name="Dev_Index" />
           </Key>
-          <Property Name="Dev_Index" Type="int" Nullable="false" />
+          <Property Name="Dev_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Dev_Prix" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Dev_Actif" Type="int" />
         </EntityType>
@@ -156,7 +157,7 @@
           <Key>
             <PropertyRef Name="EPai_Index" />
           </Key>
-          <Property Name="EPai_Index" Type="int" Nullable="false" />
+          <Property Name="EPai_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EPai_Etat" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="EPai_Date" Type="datetime" Nullable="false" />
           <Property Name="EPai_Actif" Type="int" />
@@ -173,7 +174,7 @@
           <Key>
             <PropertyRef Name="Four_Index" />
           </Key>
-          <Property Name="Four_Index" Type="int" Nullable="false" />
+          <Property Name="Four_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Four_Nom" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Four_Actif" Type="int" />
         </EntityType>
@@ -181,7 +182,7 @@
           <Key>
             <PropertyRef Name="Gam_Index" />
           </Key>
-          <Property Name="Gam_Index" Type="int" Nullable="false" />
+          <Property Name="Gam_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Gam_Nom" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Gam_Actif" Type="int" />
         </EntityType>
@@ -189,7 +190,7 @@
           <Key>
             <PropertyRef Name="Model_Index" />
           </Key>
-          <Property Name="Model_Index" Type="int" Nullable="false" />
+          <Property Name="Model_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Model_Nom" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Model_Actif" Type="int" />
         </EntityType>
@@ -197,7 +198,7 @@
           <Key>
             <PropertyRef Name="Mod_Index" />
           </Key>
-          <Property Name="Mod_Index" Type="int" Nullable="false" />
+          <Property Name="Mod_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Mod_Nom" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Mod_Prix" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Mod_Date" Type="datetime" />
@@ -207,7 +208,7 @@
           <Key>
             <PropertyRef Name="Pai_Index" />
           </Key>
-          <Property Name="Pai_Index" Type="int" Nullable="false" />
+          <Property Name="Pai_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Pai_Type" Type="int" Nullable="false" />
           <Property Name="Pai_Etat" Type="int" Nullable="false" />
           <Property Name="Pai_Actif" Type="int" />
@@ -224,7 +225,7 @@
           <Key>
             <PropertyRef Name="Sts_Index" />
           </Key>
-          <Property Name="Sts_Index" Type="int" Nullable="false" />
+          <Property Name="Sts_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Sts_Ville" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Sts_Actif" Type="int" />
         </EntityType>
@@ -240,7 +241,7 @@
           <Key>
             <PropertyRef Name="TPai_Index" />
           </Key>
-          <Property Name="TPai_Index" Type="int" Nullable="false" />
+          <Property Name="TPai_Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TPai_Nom" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="TPai_Actif" Type="int" />
         </EntityType>
@@ -251,6 +252,16 @@
           </Key>
           <Property Name="Cli_Index" Type="int" Nullable="false" />
           <Property Name="Dev_Index" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_MDR_Appartient_Modeles_Gammes_MDR_Gammes">
           <End Role="MDR_Gammes" Type="Self.MDR_Gammes" Multiplicity="1" />
@@ -666,6 +677,7 @@
           <EntitySet Name="MDR_Stocke_Sites_Composants" EntityType="Self.MDR_Stocke_Sites_Composants" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MDR_Types_Paiement" EntityType="Self.MDR_Types_Paiement" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MDR_Validation_Client_Devis" EntityType="Self.MDR_Validation_Client_Devis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_MDR_Appartient_Modeles_Gammes_MDR_Gammes" Association="Self.FK_MDR_Appartient_Modeles_Gammes_MDR_Gammes">
             <End Role="MDR_Gammes" EntitySet="MDR_Gammes" />
             <End Role="MDR_Appartient_Modeles_Gammes" EntitySet="MDR_Appartient_Modeles_Gammes" />
@@ -804,6 +816,7 @@
           <EntitySet Name="MDR_Commandes" EntityType="MADERA_V1Model.MDR_Commandes" />
           <EntitySet Name="MDR_Commerciaux" EntityType="MADERA_V1Model.MDR_Commerciaux" />
           <EntitySet Name="MDR_Composants" EntityType="MADERA_V1Model.MDR_Composants" />
+          <EntitySet Name="MDR_Contient_Composants_Modules" EntityType="MADERA_V1Model.MDR_Contient_Composants_Modules" />
           <EntitySet Name="MDR_Devis" EntityType="MADERA_V1Model.MDR_Devis" />
           <EntitySet Name="MDR_Etat_Paiement" EntityType="MADERA_V1Model.MDR_Etat_Paiement" />
           <EntitySet Name="MDR_Fournisseurs" EntityType="MADERA_V1Model.MDR_Fournisseurs" />
@@ -813,6 +826,15 @@
           <EntitySet Name="MDR_Paiement" EntityType="MADERA_V1Model.MDR_Paiement" />
           <EntitySet Name="MDR_Sites" EntityType="MADERA_V1Model.MDR_Sites" />
           <EntitySet Name="MDR_Types_Paiement" EntityType="MADERA_V1Model.MDR_Types_Paiement" />
+          <EntitySet Name="sysdiagrams" EntityType="MADERA_V1Model.sysdiagrams" />
+          <AssociationSet Name="FK_MDR_Contient_Composants_Modules_MDR_Composants" Association="MADERA_V1Model.FK_MDR_Contient_Composants_Modules_MDR_Composants">
+            <End Role="MDR_Composants" EntitySet="MDR_Composants" />
+            <End Role="MDR_Contient_Composants_Modules" EntitySet="MDR_Contient_Composants_Modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MDR_Contient_Composants_Modules_MDR_Modules" Association="MADERA_V1Model.FK_MDR_Contient_Composants_Modules_MDR_Modules">
+            <End Role="MDR_Modules" EntitySet="MDR_Modules" />
+            <End Role="MDR_Contient_Composants_Modules" EntitySet="MDR_Contient_Composants_Modules" />
+          </AssociationSet>
           <AssociationSet Name="MDR_Appartient_Modeles_Gammes" Association="MADERA_V1Model.MDR_Appartient_Modeles_Gammes">
             <End Role="MDR_Gammes" EntitySet="MDR_Gammes" />
             <End Role="MDR_Modeles" EntitySet="MDR_Modeles" />
@@ -840,10 +862,6 @@
           <AssociationSet Name="MDR_Contient_Composants_Devis" Association="MADERA_V1Model.MDR_Contient_Composants_Devis">
             <End Role="MDR_Composants" EntitySet="MDR_Composants" />
             <End Role="MDR_Devis" EntitySet="MDR_Devis" />
-          </AssociationSet>
-          <AssociationSet Name="MDR_Contient_Composants_Modules" Association="MADERA_V1Model.MDR_Contient_Composants_Modules">
-            <End Role="MDR_Composants" EntitySet="MDR_Composants" />
-            <End Role="MDR_Modules" EntitySet="MDR_Modules" />
           </AssociationSet>
           <AssociationSet Name="MDR_Contient_Modeles_Devis" Association="MADERA_V1Model.MDR_Contient_Modeles_Devis">
             <End Role="MDR_Devis" EntitySet="MDR_Devis" />
@@ -882,7 +900,7 @@
           <Key>
             <PropertyRef Name="Cli_Index" />
           </Key>
-          <Property Name="Cli_Index" Type="Int32" Nullable="false" />
+          <Property Name="Cli_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Cli_Nom" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Cli_Prenom" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Cli_Adresse" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
@@ -900,7 +918,7 @@
           <Key>
             <PropertyRef Name="Comma_Index" />
           </Key>
-          <Property Name="Comma_Index" Type="Int32" Nullable="false" />
+          <Property Name="Comma_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Comma_Prix" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
           <Property Name="Comma_Actif" Type="Int32" />
           <NavigationProperty Name="MDR_Clients" Relationship="MADERA_V1Model.MDR_Commande_Client_Commandes" FromRole="MDR_Commandes" ToRole="MDR_Clients" />
@@ -910,7 +928,7 @@
           <Key>
             <PropertyRef Name="Com_Index" />
           </Key>
-          <Property Name="Com_Index" Type="Int32" Nullable="false" />
+          <Property Name="Com_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Com_Nom" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Com_Identifiant" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Com_Mdp" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
@@ -921,21 +939,32 @@
           <Key>
             <PropertyRef Name="Comp_Index" />
           </Key>
-          <Property Name="Comp_Index" Type="Int32" Nullable="false" />
+          <Property Name="Comp_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Comp_Nom" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Comp_Type" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Comp_Couleur" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Comp_Actif" Type="Int32" />
+          <NavigationProperty Name="MDR_Contient_Composants_Modules" Relationship="MADERA_V1Model.FK_MDR_Contient_Composants_Modules_MDR_Composants" FromRole="MDR_Composants" ToRole="MDR_Contient_Composants_Modules" />
           <NavigationProperty Name="MDR_Devis" Relationship="MADERA_V1Model.MDR_Contient_Composants_Devis" FromRole="MDR_Composants" ToRole="MDR_Devis" />
-          <NavigationProperty Name="MDR_Modules" Relationship="MADERA_V1Model.MDR_Contient_Composants_Modules" FromRole="MDR_Composants" ToRole="MDR_Modules" />
           <NavigationProperty Name="MDR_Fournisseurs" Relationship="MADERA_V1Model.MDR_Fourni_Fournisseur_Composants" FromRole="MDR_Composants" ToRole="MDR_Fournisseurs" />
           <NavigationProperty Name="MDR_Sites" Relationship="MADERA_V1Model.MDR_Stocke_Sites_Composants" FromRole="MDR_Composants" ToRole="MDR_Sites" />
+        </EntityType>
+        <EntityType Name="MDR_Contient_Composants_Modules">
+          <Key>
+            <PropertyRef Name="Comp_Index" />
+            <PropertyRef Name="Mod_Index" />
+          </Key>
+          <Property Name="Comp_Index" Type="Int32" Nullable="false" />
+          <Property Name="Mod_Index" Type="Int32" Nullable="false" />
+          <Property Name="Comp_Nbr" Type="Int32" />
+          <NavigationProperty Name="MDR_Composants" Relationship="MADERA_V1Model.FK_MDR_Contient_Composants_Modules_MDR_Composants" FromRole="MDR_Contient_Composants_Modules" ToRole="MDR_Composants" />
+          <NavigationProperty Name="MDR_Modules" Relationship="MADERA_V1Model.FK_MDR_Contient_Composants_Modules_MDR_Modules" FromRole="MDR_Contient_Composants_Modules" ToRole="MDR_Modules" />
         </EntityType>
         <EntityType Name="MDR_Devis">
           <Key>
             <PropertyRef Name="Dev_Index" />
           </Key>
-          <Property Name="Dev_Index" Type="Int32" Nullable="false" />
+          <Property Name="Dev_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Dev_Prix" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="Dev_Actif" Type="Int32" />
           <NavigationProperty Name="MDR_Clients" Relationship="MADERA_V1Model.MDR_Contient_Client_Devis" FromRole="MDR_Devis" ToRole="MDR_Clients" />
@@ -949,7 +978,7 @@
           <Key>
             <PropertyRef Name="EPai_Index" />
           </Key>
-          <Property Name="EPai_Index" Type="Int32" Nullable="false" />
+          <Property Name="EPai_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="EPai_Etat" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="EPai_Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="EPai_Actif" Type="Int32" />
@@ -959,7 +988,7 @@
           <Key>
             <PropertyRef Name="Four_Index" />
           </Key>
-          <Property Name="Four_Index" Type="Int32" Nullable="false" />
+          <Property Name="Four_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Four_Nom" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Four_Actif" Type="Int32" />
           <NavigationProperty Name="MDR_Sites" Relationship="MADERA_V1Model.MDR_Appartient_Sites_Fournisseurs" FromRole="MDR_Fournisseurs" ToRole="MDR_Sites" />
@@ -969,7 +998,7 @@
           <Key>
             <PropertyRef Name="Gam_Index" />
           </Key>
-          <Property Name="Gam_Index" Type="Int32" Nullable="false" />
+          <Property Name="Gam_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Gam_Nom" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Gam_Actif" Type="Int32" />
           <NavigationProperty Name="MDR_Modeles" Relationship="MADERA_V1Model.MDR_Appartient_Modeles_Gammes" FromRole="MDR_Gammes" ToRole="MDR_Modeles" />
@@ -978,7 +1007,7 @@
           <Key>
             <PropertyRef Name="Model_Index" />
           </Key>
-          <Property Name="Model_Index" Type="Int32" Nullable="false" />
+          <Property Name="Model_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Model_Nom" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Model_Actif" Type="Int32" />
           <NavigationProperty Name="MDR_Gammes" Relationship="MADERA_V1Model.MDR_Appartient_Modeles_Gammes" FromRole="MDR_Modeles" ToRole="MDR_Gammes" />
@@ -989,12 +1018,12 @@
           <Key>
             <PropertyRef Name="Mod_Index" />
           </Key>
-          <Property Name="Mod_Index" Type="Int32" Nullable="false" />
+          <Property Name="Mod_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Mod_Nom" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Mod_Prix" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="Mod_Date" Type="DateTime" Precision="3" />
           <Property Name="Mod_Actif" Type="Int32" />
-          <NavigationProperty Name="MDR_Composants" Relationship="MADERA_V1Model.MDR_Contient_Composants_Modules" FromRole="MDR_Modules" ToRole="MDR_Composants" />
+          <NavigationProperty Name="MDR_Contient_Composants_Modules" Relationship="MADERA_V1Model.FK_MDR_Contient_Composants_Modules_MDR_Modules" FromRole="MDR_Modules" ToRole="MDR_Contient_Composants_Modules" />
           <NavigationProperty Name="MDR_Devis" Relationship="MADERA_V1Model.MDR_Contient_Modules_Devis" FromRole="MDR_Modules" ToRole="MDR_Devis" />
           <NavigationProperty Name="MDR_Modeles" Relationship="MADERA_V1Model.MDR_Contient_Modules_Modeles" FromRole="MDR_Modules" ToRole="MDR_Modeles" />
         </EntityType>
@@ -1002,7 +1031,7 @@
           <Key>
             <PropertyRef Name="Pai_Index" />
           </Key>
-          <Property Name="Pai_Index" Type="Int32" Nullable="false" />
+          <Property Name="Pai_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Pai_Type" Type="Int32" Nullable="false" />
           <Property Name="Pai_Etat" Type="Int32" Nullable="false" />
           <Property Name="Pai_Actif" Type="Int32" />
@@ -1014,7 +1043,7 @@
           <Key>
             <PropertyRef Name="Sts_Index" />
           </Key>
-          <Property Name="Sts_Index" Type="Int32" Nullable="false" />
+          <Property Name="Sts_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Sts_Ville" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Sts_Actif" Type="Int32" />
           <NavigationProperty Name="MDR_Fournisseurs" Relationship="MADERA_V1Model.MDR_Appartient_Sites_Fournisseurs" FromRole="MDR_Sites" ToRole="MDR_Fournisseurs" />
@@ -1024,11 +1053,45 @@
           <Key>
             <PropertyRef Name="TPai_Index" />
           </Key>
-          <Property Name="TPai_Index" Type="Int32" Nullable="false" />
+          <Property Name="TPai_Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TPai_Nom" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="TPai_Actif" Type="Int32" />
           <NavigationProperty Name="MDR_Paiement" Relationship="MADERA_V1Model.MDR_Choisir_Type_Paiement" FromRole="MDR_Types_Paiement" ToRole="MDR_Paiement" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_MDR_Contient_Composants_Modules_MDR_Composants">
+          <End Type="MADERA_V1Model.MDR_Composants" Role="MDR_Composants" Multiplicity="1" />
+          <End Type="MADERA_V1Model.MDR_Contient_Composants_Modules" Role="MDR_Contient_Composants_Modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MDR_Composants">
+              <PropertyRef Name="Comp_Index" />
+            </Principal>
+            <Dependent Role="MDR_Contient_Composants_Modules">
+              <PropertyRef Name="Comp_Index" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MDR_Contient_Composants_Modules_MDR_Modules">
+          <End Type="MADERA_V1Model.MDR_Modules" Role="MDR_Modules" Multiplicity="1" />
+          <End Type="MADERA_V1Model.MDR_Contient_Composants_Modules" Role="MDR_Contient_Composants_Modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MDR_Modules">
+              <PropertyRef Name="Mod_Index" />
+            </Principal>
+            <Dependent Role="MDR_Contient_Composants_Modules">
+              <PropertyRef Name="Mod_Index" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="MDR_Appartient_Modeles_Gammes">
           <End Type="MADERA_V1Model.MDR_Gammes" Role="MDR_Gammes" Multiplicity="*" />
           <End Type="MADERA_V1Model.MDR_Modeles" Role="MDR_Modeles" Multiplicity="*" />
@@ -1056,10 +1119,6 @@
         <Association Name="MDR_Contient_Composants_Devis">
           <End Type="MADERA_V1Model.MDR_Composants" Role="MDR_Composants" Multiplicity="*" />
           <End Type="MADERA_V1Model.MDR_Devis" Role="MDR_Devis" Multiplicity="*" />
-        </Association>
-        <Association Name="MDR_Contient_Composants_Modules">
-          <End Type="MADERA_V1Model.MDR_Composants" Role="MDR_Composants" Multiplicity="*" />
-          <End Type="MADERA_V1Model.MDR_Modules" Role="MDR_Modules" Multiplicity="*" />
         </Association>
         <Association Name="MDR_Contient_Modeles_Devis">
           <End Type="MADERA_V1Model.MDR_Devis" Role="MDR_Devis" Multiplicity="*" />
@@ -1093,7 +1152,7 @@
           <End Type="MADERA_V1Model.MDR_Clients" Role="MDR_Clients" Multiplicity="*" />
           <End Type="MADERA_V1Model.MDR_Devis" Role="MDR_Devis" Multiplicity="*" />
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1142,6 +1201,15 @@
                 <ScalarProperty Name="Comp_Couleur" ColumnName="Comp_Couleur" />
                 <ScalarProperty Name="Comp_Type" ColumnName="Comp_Type" />
                 <ScalarProperty Name="Comp_Nom" ColumnName="Comp_Nom" />
+                <ScalarProperty Name="Comp_Index" ColumnName="Comp_Index" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MDR_Contient_Composants_Modules">
+            <EntityTypeMapping TypeName="MADERA_V1Model.MDR_Contient_Composants_Modules">
+              <MappingFragment StoreEntitySet="MDR_Contient_Composants_Modules">
+                <ScalarProperty Name="Comp_Nbr" ColumnName="Comp_Nbr" />
+                <ScalarProperty Name="Mod_Index" ColumnName="Mod_Index" />
                 <ScalarProperty Name="Comp_Index" ColumnName="Comp_Index" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1231,6 +1299,17 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="MADERA_V1Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <AssociationSetMapping Name="MDR_Appartient_Modeles_Gammes" TypeName="MADERA_V1Model.MDR_Appartient_Modeles_Gammes" StoreEntitySet="MDR_Appartient_Modeles_Gammes">
             <EndProperty Name="MDR_Modeles">
               <ScalarProperty Name="Model_Index" ColumnName="Model_Index" />
@@ -1282,14 +1361,6 @@
           <AssociationSetMapping Name="MDR_Contient_Composants_Devis" TypeName="MADERA_V1Model.MDR_Contient_Composants_Devis" StoreEntitySet="MDR_Contient_Composants_Devis">
             <EndProperty Name="MDR_Devis">
               <ScalarProperty Name="Dev_Index" ColumnName="Dev_Index" />
-            </EndProperty>
-            <EndProperty Name="MDR_Composants">
-              <ScalarProperty Name="Comp_Index" ColumnName="Comp_Index" />
-            </EndProperty>
-          </AssociationSetMapping>
-          <AssociationSetMapping Name="MDR_Contient_Composants_Modules" TypeName="MADERA_V1Model.MDR_Contient_Composants_Modules" StoreEntitySet="MDR_Contient_Composants_Modules">
-            <EndProperty Name="MDR_Modules">
-              <ScalarProperty Name="Mod_Index" ColumnName="Mod_Index" />
             </EndProperty>
             <EndProperty Name="MDR_Composants">
               <ScalarProperty Name="Comp_Index" ColumnName="Comp_Index" />

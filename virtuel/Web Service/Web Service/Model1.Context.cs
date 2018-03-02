@@ -29,6 +29,7 @@ namespace Web_Service
         public virtual DbSet<MDR_Commandes> MDR_Commandes { get; set; }
         public virtual DbSet<MDR_Commerciaux> MDR_Commerciaux { get; set; }
         public virtual DbSet<MDR_Composants> MDR_Composants { get; set; }
+        public virtual DbSet<MDR_Contient_Composants_Modules> MDR_Contient_Composants_Modules { get; set; }
         public virtual DbSet<MDR_Devis> MDR_Devis { get; set; }
         public virtual DbSet<MDR_Etat_Paiement> MDR_Etat_Paiement { get; set; }
         public virtual DbSet<MDR_Fournisseurs> MDR_Fournisseurs { get; set; }
@@ -38,5 +39,6 @@ namespace Web_Service
         public virtual DbSet<MDR_Paiement> MDR_Paiement { get; set; }
         public virtual DbSet<MDR_Sites> MDR_Sites { get; set; }
         public virtual DbSet<MDR_Types_Paiement> MDR_Types_Paiement { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

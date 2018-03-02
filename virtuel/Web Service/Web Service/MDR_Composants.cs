@@ -17,8 +17,8 @@ namespace Web_Service
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public MDR_Composants()
         {
+            this.MDR_Contient_Composants_Modules = new HashSet<MDR_Contient_Composants_Modules>();
             this.MDR_Devis = new HashSet<MDR_Devis>();
-            this.MDR_Modules = new HashSet<MDR_Modules>();
             this.MDR_Fournisseurs = new HashSet<MDR_Fournisseurs>();
             this.MDR_Sites = new HashSet<MDR_Sites>();
         }
@@ -30,9 +30,9 @@ namespace Web_Service
         public Nullable<int> Comp_Actif { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MDR_Devis> MDR_Devis { get; set; }
+        public virtual ICollection<MDR_Contient_Composants_Modules> MDR_Contient_Composants_Modules { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MDR_Modules> MDR_Modules { get; set; }
+        public virtual ICollection<MDR_Devis> MDR_Devis { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MDR_Fournisseurs> MDR_Fournisseurs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
